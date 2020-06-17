@@ -1,2 +1,2 @@
 # OnlineMCIT
-Sources for Online MCIT reddit and Discord channels
+Sources for Online MCIT Reddit and Discord channels
