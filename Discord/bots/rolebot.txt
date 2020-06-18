@@ -1,0 +1,7 @@
+-rolemenu create <name> -nodm
+
+-rolemenu create <name> -nodm -m <msg_id>
+
+
+*Please read the rules and select the role to start using this channel.*
+- By selecting a role, therefore, you agree to the server rules.
