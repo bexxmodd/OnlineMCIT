@@ -30,5 +30,11 @@ async def on_member_join(member):
     await channel.send(msg)
     print(member.name + " was greeted")
 
+@client.event
+async def on_member_remove(member):
+    print(member.name + " left the channel")
+    msg = f'{member.name} left the server'
+    channel = client.get_channel(723583513563234344)
+    await channel.send(msg)
 
 client.run(TOKEN)
