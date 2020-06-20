@@ -9,10 +9,7 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
-
 client = discord.Client()
-
-@client.event
 
 @client.event
 async def on_ready():
@@ -22,6 +19,7 @@ async def on_ready():
         f'{guild.name}(id: {guild.id})'
     )
 
+# Greets the newly joined members in the welcome channel
 @client.event
 async def on_member_join(member):
     print("Recognized that " + member.name + " joined")
@@ -30,6 +28,8 @@ async def on_member_join(member):
     await channel.send(msg)
     print(member.name + " was greeted")
 
+# When a member leaves the server,
+# send the message into the Admin's channel.
 @client.event
 async def on_member_remove(member):
     print(member.name + " left the channel")
