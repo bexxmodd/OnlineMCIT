@@ -2,27 +2,31 @@
 import os
 import random
 import requests
-import discord
+import random
 
+from discord.ext import commands
 from dotenv import load_dotenv
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN2')
 
-client = discord.Client()
+bot = commands.Bot(command_prefix='!', description='Kanye West himself!')
 
-@client.event
+@bot.event
 async def on_ready():
-    print(f'{client.user.name} has connected to Discord!')
+    print('Logged in as')
+    print(bot.user.name)
+    print(bot.user.id)
+    print('------')
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
+@bot.command(name='preach', help='-Kanye will share his wisdom.')
+async def kanye_wisdom(ctx):
     quote = requests.get('https://api.kanye.rest?format=text').text
+    await ctx.send(quote)
 
-    if message.content.lower() == 'tell me kanye':
-        await message.channel.send(quote)
+@bot.command(name='bio', help='-Kanye will tell about himself')
+async def kanye_bio(ctx):
+    await ctx.send('I\'m an American rapper, singer, songwriter, record producer, composer, entrepreneur and fashion designer.')
 
-client.run(TOKEN)
+
+bot.run(TOKEN)
