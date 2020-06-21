@@ -3,6 +3,8 @@ import os
 import random
 import requests
 import random
+import json
+import dadJokes as dj
 
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -23,15 +25,19 @@ async def on_ready():
 
 # Will respond to the command by getting a quote from Kanye REST API
 # and posting as a message in the channel
-@bot.command(name='preach', help='-Kanye will share his wisdom.')
+@bot.command(name='preach', help='-Kanye shares his wisdom.')
 async def kanye_wisdom(ctx):
     quote = requests.get('https://api.kanye.rest?format=text').text
     await ctx.send(quote)
 
 # Bot prints Kanye West's bio.
-@bot.command(name='bio', help='-Kanye will tell about himself')
+@bot.command(name='bio', help='-Learn who is Kanye from himself')
 async def kanye_bio(ctx):
     await ctx.send('I\'m an American rapper, singer, songwriter, record producer, composer, entrepreneur and fashion designer.')
 
+
+@bot.command(name='joke', help='-Kanye tells you a dad-joke based on a given word(s)')
+async def kanye_joke(ctx, *args):
+    await ctx.send(dj.choosing_joke(args))
 
 bot.run(TOKEN)
