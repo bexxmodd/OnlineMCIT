@@ -43,7 +43,7 @@ git checkout -b <branch-name>
 ```
 _P.S._ `checkout -b` _allows us to create a branch and switch to it._
 
-Somilarly you can use:
+Similarly you can use:
 ```
 git branch <branch-name>
 git checkout <branch-name>
