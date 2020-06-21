@@ -50,4 +50,6 @@ git commit -m "type what you have done"
 git push
 ```
 
-8. After that go to the Issues again and close the issue with the note what was pushed on the project.
+8. After that go to the Issues again and close the issue with the note what was pushed on the project
+
+![final](https://i.imgur.com/kNxB8LB.png)
