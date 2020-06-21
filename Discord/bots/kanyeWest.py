@@ -31,11 +31,11 @@ async def kanye_wisdom(ctx):
     await ctx.send(quote)
 
 # Bot prints Kanye West's bio.
-@bot.command(name='bio', help='-Learn who is Kanye from himself')
+@bot.command(name='bio', help='-Learn who is Kanye from Kanye')
 async def kanye_bio(ctx):
     await ctx.send('I\'m an American rapper, singer, songwriter, record producer, composer, entrepreneur and fashion designer.')
 
-
+# Kanye will tell a dad joke. Takes string(s) as an argument.
 @bot.command(name='joke', help='-Kanye tells you a dad-joke based on a given word(s)')
 async def kanye_joke(ctx, *args):
     await ctx.send(dj.choosing_joke(args))
