@@ -41,7 +41,13 @@ git remote add upstream https://github.com/bexxmodd/OnlineMCIT.git
 ```
 git checkout -b <branch-name>
 ```
-P.S. `checkout -b` allows us to create a branch and switch to it.
+_P.S._ `checkout -b` _allows us to create a branch and switch to it._
+
+Somilarly you can use:
+```
+git branch <branch-name>
+git checkout <branch-name>
+```
 
 7. After you are done with the functionality, add and commit changes
 ```
