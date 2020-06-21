@@ -47,9 +47,10 @@ P.S. `checkout -b` allows us to create a branch and switch to it.
 ```
 git add <file-name>
 git commit -m "type what you have done"
-git push
+git push origin <branch-name>
 ```
+8. In your repository on *GitHub*, you'll see the `Compare & pull request` button. Click on it and then click submit.
 
-8. After that go to the Issues again and close the issue with the note what was pushed on the project
+9. Go to the Issues again and close the issue you opened in the beginning with the note what was pushed on the project
 
 ![final](https://i.imgur.com/kNxB8LB.png)
