@@ -5,9 +5,11 @@ This is an open-source project and all MCIT students are encouraged to contribut
 Currently, we have two bots:
 
 **Welcome bot** - greats new members and directs them to the rules section. Also notifies Admins when someone leaves the server
+
 ![welcome-bot](https://i.imgur.com/Q6i2UIk.png)
 
 **Kanye West** - Our special guest. Who loves to share his thoughts and tell jokes. He also provides basic information about the Online MCIT program. Our goal is to expend him to be more interactive and answer frequently asked questions regarding the program.
+
 ![kanyeWest](https://i.imgur.com/oDSr83i.png)
 
 If you want to contribute to the project:
