@@ -23,7 +23,7 @@ If you want to contribute to the project:
 
 3. Using a terminal, clone the repo to your local git by typing:
 ```
-git clone git@github.com:bexxmodd/OnlineMCIT.git
+git clone https://github.com/bexxmodd/OnlineMCIT.git
 ```
 _P.S. Automatically new repo will be named as OnlineMCIT and will be copied where your present working directory is. If you want it to be cloned somewhere else type the path after the GitHub link._
 
@@ -34,7 +34,7 @@ cd OnlineMCIT
 
 5. Set up the remote  repository, which will allow you to fetch the changes and updates introduced to the project:
 ```
-git remote add upstream git@github.com:bexxmodd/OnlineMCIT.git
+git remote add upstream https://github.com/bexxmodd/OnlineMCIT.git
 ```
 
 6. Create a branch which you will use to create the functionality you described in the `New Issue`
