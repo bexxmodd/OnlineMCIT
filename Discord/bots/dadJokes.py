@@ -22,8 +22,7 @@ def choosing_joke(*args):
     if len(jokes) > 1:
         return random.choice(jokes)
     elif jokes == []:
-        print('Gimme\' something else')
-        return choosing_joke()
+        return('Gimme\' another word')
     else:
         return jokes
 
