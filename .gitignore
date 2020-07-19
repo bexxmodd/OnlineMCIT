@@ -76,5 +76,5 @@ rolebot.txt
 kanye-bot.tar.gz 
 welcome-bot.tar.gz
 Dockerfile
-mykeypair.pem
+new-key.pem
 dockerRunCmd.txt

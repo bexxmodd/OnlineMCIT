@@ -4,14 +4,11 @@ import random
 import requests
 import random
 import json
-import discord
 import dadJokes as dj
 import descriptions as d
 
 from discord.ext import commands
 from dotenv import load_dotenv
-
-client = discord.Client()
 
 # Loads Discord keys using dotenv module
 load_dotenv()
@@ -80,7 +77,7 @@ async def courses(ctx):
             + 'ESE 542 Statistics for Data Science;'
     )
 
-@bot.command(name='course', help='-Gives specific description of a course. Followed by the course number. Exmaple: !course cit591')
+@bot.command(name='course', help='-Gives description of a specific course. Exmaple: !course cit591')
 async def course_info(ctx, course_number):
     if course_number.lower() == 'cit591':
         await ctx.send(d.cit591())
