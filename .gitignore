@@ -8,7 +8,9 @@ venv
 *.exe
 credentials.txt
 test.py
+rolebot.txt
 *.env
+mcit-welcome.pem
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -68,3 +70,10 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Additions
+rolebot.txt
+kanye-bot.tar.gz 
+welcome-bot.tar.gz
+Dockerfile
+mykeypair.pem

@@ -11,4 +11,3 @@ requests==2.24.0
 urllib3==1.25.9
 websockets==8.1
 yarl==1.4.2
-kanye-bot.tar.gz -e welcome-bot.tar.gz -e mcit-welcome.pem -e Dockerfile

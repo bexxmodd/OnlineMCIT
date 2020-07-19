@@ -40,4 +40,21 @@ async def kanye_bio(ctx):
 async def kanye_joke(ctx, *args):
     await ctx.send(dj.choosing_joke(args))
 
+"""Kanye provides information regarding the programm"""
+@bot.command(name='demographics', help='Gives the Student Demographics')
+async def deadline(ctx):
+    await ctx.send(
+        "Countries Represented: 32 \
+        US States/Territories Represented: 41 \
+        Age range: 20s-60s \
+        US Citizens: 49% \
+        International Students: 51% \
+        Women: 38% \
+        Men: 62% \
+        Total Program Enrollment: 626 \
+        Incoming Class Size: 250-350"
+    )
+
+
+
 bot.run(TOKEN)
