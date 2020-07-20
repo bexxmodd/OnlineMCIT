@@ -4,10 +4,11 @@ import random
 import requests
 import random
 import json
+import datetime
 import dadJokes as dj
 import descriptions as d
 
-from discord.ext import commands
+from discord.ext import commands, timers
 from dotenv import load_dotenv
 
 # Loads Discord keys using dotenv module
@@ -16,6 +17,7 @@ TOKEN = os.getenv('DISCORD_TOKEN2')
 
 # Defines prefix which will be used to call bot for action.
 bot = commands.Bot(command_prefix='!', description='Kanye West himself!')
+bot.timer_manager = timers.TimerManager(bot)
 
 @bot.event
 async def on_ready():
@@ -103,5 +105,22 @@ async def course_info(ctx, course_number):
         await ctx.send(d.cis581())
     elif course_number.lower() == 'ese542':
         await ctx.send(d.ese542())
+
+@bot.command(name='remind', help='-Sets up reminder. The date must be in ``Y/M/D`` format.')
+async def remind(ctx, time, *, text):
+    try:
+        date = datetime.datetime(*map(int, time.split("/")))
+        await ctx.send(f"I'll remind you to *{text}* on {date}!")
+        bot.timer_manager.create_timer("reminder", date, args=(ctx.channel.id, ctx.author.id, text))
+    except:
+        await ctx.send('Error: after command first indicate time, then reminder msg. ' \
+            + 'The time format should be in 24-h format with `Y/M/D/h/m/s`, where `h/m/s` is optional')
+
+@bot.event
+async def on_reminder(channel_id, author_id, text):
+    channel = bot.get_channel(channel_id) # grab the channel where bot will post the reminder
+    user = bot.get_user(author_id) # grab the user where bot will post the reminder
+    await channel.send(f"Hey, <@{author_id}>, remember to: **{text}**")
+    await user.send(f"Hey, <@{author_id}>, remember to: **{text}**")
 
 bot.run(TOKEN)
