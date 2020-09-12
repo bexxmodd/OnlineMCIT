@@ -7,7 +7,6 @@ import json
 import datetime
 import dadJokes as dj
 import descriptions as d
-
 from discord.ext import commands, timers
 from dotenv import load_dotenv
 
@@ -110,7 +109,7 @@ async def course_info(ctx, course_number):
 async def remind(ctx, time, *, text):
     try:
         date = datetime.datetime(*map(int, time.split("/")))
-        await ctx.send(f"I'll remind you to *{text}* on {date}!")
+        await ctx.send(f"I'll remind you: *{text}* on: {date}!")
         bot.timer_manager.create_timer("reminder", date, args=(ctx.channel.id, ctx.author.id, text))
     except:
         await ctx.send('Error: after command first indicate time, then reminder msg. ' \

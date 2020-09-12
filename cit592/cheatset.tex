@@ -1,0 +1,61 @@
+
+\documentclass[12pt]{article}
+\usepackage{lingmacros}
+\usepackage{tree-dvips}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\begin{document}
+
+\section*{LaTeX and Discrete Math Cheatsheet}
+
+\subsection*{Special Sets}
+
+\begin{itemize}
+    \item $\emptyset$ -- The empty or aka null. \textcolor{blue} {$\backslash$emptyset}.
+    \item $\mathbb{U}$ -- The uiniverse set. The set will all the elements. \textcolor{blue} {$\backslash$mathbb\{U\}}
+    \item $\mathbb{N}$ -- The set of natural numbers. $\mathbb{N}=\{..,-1,0,1,2,..\}$. \textcolor{blue} {$\backslash$mathbb\{N\}}
+    \item $\mathbb{Z}$ -- The set of integers. Positives. $\mathbb{Z}^+=\{1, 2, 3,..\}$; Negatives $\mathbb{Z}^-=\{..,-3, -2, -1\}$. \textcolor{blue} {$\backslash$mathbb\{Z\}}
+    \item $\mathbb{Q}$ -- The set of rational numbers. (a number that can be express as the ratio of two integers). \textcolor{blue} {$\backslash$mathbb\{Q\}}
+    \item $\mathbb{R}$ -- The set of real numbers. Combining the set of rational numbers and the set of irrational numbers. \textcolor{blue} {$\backslash$mathbb\{R\}}
+    \item $\mathcal{P} (A)$ -- The power set of any set A is the set of all subsets of A. \textcolor{blue} {$\backslash$mathcal\{P\}}
+\end{itemize}
+
+
+\subsection*{Set Theory Notation}
+\begin{itemize}
+    \item $\{,\}$ -- To enclose the elements of the set.
+    \item $:$ -- "such that"; For example $\{x: x > 2\}$ reads as, for $x$ such that $x$ is greater that two.
+    \item $\in$ -- An element of; $2 \in \{1,2,3\}$ asserts that 2 is an element of the set $\{1,2,3\}$. \textcolor{blue} {$\backslash$in}
+    \item $\notin$ -- Is not an element of; $4 \notin \{1,2,3\}$ asserts that 4 is not an element of the set $\{1,2,3\}$. \textcolor{blue} {$\backslash$notin}
+    \item $\subseteq$ -- Is a subset of; $A\subseteq B$ asserts that every element in A is an element in B. \textcolor{blue} {$\backslash$subseteq}
+    \item $\subset$ -- Is a proper subset of; $A\subset B$ asserts that every element in A is an element in B but $A\neq B$. \textcolor{blue} {$\backslash$subset}
+    \item $\cap$ -- Intersection ("and", "both true"); $A\cap B$ is the intersaction of A and B. \textcolor{blue} {$\backslash$cap}
+    \item $\cup$ -- Union ("or"); $A\cup B$ says we have a union of A and B. \textcolor{blue} {$\backslash$cup}
+    \item $\times$ -- \textbf{Cartesian Product}; For $A=\{1,2\}$ and $B=\{3,2\}$, we'll have $A\times B$ as $\{1,3\}, \{1,2\}, \{2,3\}, \{2,2\}$. \textcolor{blue} {$\backslash$times}
+    \item $\setminus$ -- Set-minus; $A\setminus B$ says that we have set with all elements of A minus B. \textcolor{blue} {$\backslash$setminus}
+    \item $\overline{A}$ -- The complement set of A; a set pf every element which is not in set A. \textcolor{blue} {$\backslash$overline}
+    \item $|A|$ -- \textbf{Cardinality} (size) of A; The number of elements in the set A. \$\textbackslash in\$
+\end{itemize}
+
+
+
+\subsection*{Logical Connectives}
+\begin{itemize}
+    \item $\wedge$ -- \textbf{Conjuction}. Similar as "and". \textcolor{blue} {$\backslash$wedge}
+    \item $\vee$ -- \textbf{Discjuntion}. Similar as "or". \textcolor{blue} {$\backslash$vee}
+    \item $\Rightarrow$ -- \textbf{Implication}. Similar as "if-them". \textcolor{blue} {$\backslash$Rightarrow}
+    \item $\neg$ -- \textbf{Negation}. simply "not". \textcolor{blue} {$\backslash$neg}
+    \item $\iff$ - \textbf{Equivalent}. "If and only if".
+\end{itemize}
+
+\subsection*{Qualifiers}
+\begin{itemize}
+    \item $\exists$ -- \textbf{Existential qualifier}. Reads "there is"; $\exists x(x<0)$ reads as "there is number $x$ that is less than zero". \textcolor{blue} {$\backslash$exists}
+    \item $\forall$ -- \textbf{Universal qualifier}. Reads "for all" or "every"; $\forall x(x>0)$ reads as "for every number $x$ that is more than zero". \textcolor{blue} {$\backslash$forall}
+\end{itemize}
+
+
+
+To use {$\backslash$mathbb} notations please first add the package \textbf{amsfonts} at the top of you document.
+
+\end{document}
