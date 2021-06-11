@@ -12,6 +12,6 @@ python-dotenv==0.13.0
 pytz==2020.1
 requests==2.24.0
 six==1.15.0
-urllib3==1.26.5
-websockets==8.1
+urllib3==1.25.9
+websockets==9.1
 yarl==1.4.2
